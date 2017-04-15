@@ -7,10 +7,17 @@ la lista vuota [] e le liste [3], [2,3] e [1,2,3] stessa.
 /*
    Soluzione con accumulatore, basta che reverso la stringa e riuso prefisso scambiando
 	la posizione di H e Acc nell'append.
+   Suppondo di no avere a disposizione il costrutto reverse e , dunque di doverlo implementare.
 */
+my_reverse(List,Reverse):- rev(List,Reverse,[]).
+rev([],Rev,Rev).
+rev([H|T],Rev,Acc):- 
+	append([H],Acc,Res),
+	rev(T,Rev,Res).
+
 
 suffisso(Suff,List):- 
-	reverse(List,R),
+	my_reverse(List,R),
 	suff(Suff,R,[]).
 
 suff(S,_,S).
