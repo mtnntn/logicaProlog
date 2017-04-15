@@ -25,8 +25,7 @@ suff(S,[H|T],Acc):-
 	append([H],Acc,Res), 
 	suff(S,T,Res).
 	
-/* Soluzione Ricorsiva senza accumulatore. */
-
+/*TODO: Soluzione Ricorsiva senza accumulatore. */
 
 
 /* 
