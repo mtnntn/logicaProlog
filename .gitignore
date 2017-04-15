@@ -1,11 +1,11 @@
 # Compiled class file
 *.class
-/bin/!
-*.class!
+/bin/
+.class!
 .project!
 .metadata!
-.settings/!
-.classpath!
+.settings/
+.classpath
 target/!
 local.properties!
 .loadpath
@@ -14,14 +14,14 @@ local.properties!
 *.log
 
 #Others
-*.db!
+*.db
 .DS_Store
 Thumbs.db !
 Desktop.ini!
 .svn
 
-/17_04_12/!
-/random/!
+/17_04_12/
+/random/
 3-Data_Structure.md
 2-Termini.md
 1-Intro.md
