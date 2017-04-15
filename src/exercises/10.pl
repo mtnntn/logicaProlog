@@ -1,5 +1,4 @@
 /* 
-
 (a) subset(+Sub,?Set) = tutti gli elementi di Sub sono anche elementi di Set.
 
 (b) rev(+X,?Y) = Y è la lista che contiene gli stessi elementi di X, ma in ordine inverso.
@@ -20,8 +19,8 @@
 	(senza utilizzare il predicato predefinito list to set/2).
 
 (g) union(+A,+B,-Union) = Union è una lista (senza ripetizioni, se anche A e B sono senza ripetizioni) che rappresenta l’unione di A e B.
-
 */
+
 /*
 occorre_in(X,[H|_]):- X=H,!.
 occorre_in(X,[_|T]):- occorre_in(X,T).
@@ -142,12 +141,7 @@ sbstall(ToSubs,NewVal,[H|T],Res,Acc):-
 sbstall(ToSubs,NewVal,[H|T],Res,Acc):-
 	not(ToSubs=H), %superflua
 	append(Acc,[H],App),
-	sbstall(ToSubs,NewVal,T,Res,App),!.
-	
-subst2(_,_,[],[]):-!.
-subst2(X,Y,[X|C],[Y|C1]):-subst2(X,Y,C,C1),!.
-subst2(A,B,[X|C1],[X|C2]):-subst2(A,B,C1,C2).
-	
+	sbstall(ToSubs,NewVal,T,Res,App),!.	
 
 /* Tests:
 subst(3,1,[],X).
